@@ -1,0 +1,73 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  background-image: url('../assets/pattern-vintage.png'), url('../assets/loader.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center -170px, center 10px;
+  background-size: auto, 500px 1000px;
+}
+
+.overlay-validation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.content-login {
+  position: relative;
+  margin: 250px auto;
+  background-color:rgba(206, 206, 206, 0.8);
+  border-radius: 10px;
+  width: 50%;
+  padding: 60px;
+}
+
+.validation {
+  text-align: center;
+}
+
+.validation h1 {
+  font-size: 70px;
+  margin-bottom: 60px;
+}
+
+.validation a {
+  text-decoration: none;
+  color: black;
+  font-size: 50px;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.overlay-user {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.overlay-user:target {
+  visibility: visible;
+}
+
+.overlay-admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.overlay-admin:target {
+  visibility: visible;
+}

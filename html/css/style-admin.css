@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-image: url('../assets/pattern-vintage.png'), url('../assets/loader.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: center -170px, center 250px;
+  background-size: auto, 250px 500px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  background-color:rgba(241, 241, 241, 0.8);
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color:rgba(206, 206, 206, 0.8);
+}

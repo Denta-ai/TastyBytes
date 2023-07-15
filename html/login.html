@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant-login</title>
+  <link rel="stylesheet" href="../html/css/style-login.css">
+</head>
+
+<body>
+  
+  <!-- user admin validation -->
+  <div class="overlay-validation">
+    <div class="content-login">
+      <div class="validation">
+        <h1>Tell us who you are??</h1>
+        <a href="#user">user</a>
+        <a href="#admin">admin</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- user registration -->
+  <div class="overlay-user" id="user">
+    <div class="content-login">
+      <form action="../php/validation.php" method="post">
+        <h2>Login user</h2>
+        <label for="">username</label><br>
+        <input type="text" name="username-user" id="username-user"><br>
+        <label for="">password</label><br>
+        <input type="password" name="password-user" id="password-user"><br><br>
+        <input type="submit" name="submit" id="submit" value="Login">
+      </form>
+    </div>
+  </div>
+
+  <!-- admin login -->
+  <div class="overlay-admin" id="admin">
+    <div class="content-login">
+      <form action="../php/validation.php" method="post">
+        <h2>Login admin</h2>
+        <label for="">username</label><br>
+        <input type="text" name="username-admin" id="username-admin"><br>
+        <label for="">password</label><br>
+        <input type="password" name="password-admin" id="password-admin"><br><br>
+        <input type="submit" name="submit" id="submit" value="Login">
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

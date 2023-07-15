@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin dasboard</title>
+    <link rel="stylesheet" href="../html/css/style-admin.css">
+</head>
+<body>
+    <h1>Admin Website</h1>
+
+    <table id="file-table">
+        <tr>
+            <th>File</th>
+            <th>Contents</th>
+        </tr>
+    </table>
+
+    <script>
+        // fetch and display file data
+        function displayFiles() {
+            const table = document.getElementById("file-table");
+
+            fetch("../php/get_files.php")
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        for (let i = 0; i < data.length; i++) {
+                            const file = data[i];
+                            const row = document.createElement("tr");
+
+                            const fileCell = document.createElement("td");
+                            fileCell.textContent = file.name;
+                            row.appendChild(fileCell);
+
+                            const contentCell = document.createElement("td");
+                            contentCell.innerHTML = "<pre>" + file.contents + "</pre>";
+                            row.appendChild(contentCell);
+
+                            table.appendChild(row);
+                        }
+                    } else {
+                        const row = document.createElement("tr");
+                        const noFilesCell = document.createElement("td");
+                        noFilesCell.setAttribute("colspan", "2");
+                        noFilesCell.textContent = "No files found.";
+                        row.appendChild(noFilesCell);
+                        table.appendChild(row);
+                    }
+                })
+                .catch(error => console.log(error));
+        }
+
+        window.onload = displayFiles;
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant-Order</title>
+  <link rel="stylesheet" href="/html/css/style-index.css">
+  <script src="/js/item-1-slider.js"></script>
+  <script src="/js/cls-btn-cart.js"></script>
+</head>
+
+<body>
+
+<!-- navbar  -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">
+      Restaurant.<span>NETNOT</span>
+    </a>
+    <div class="navbar-nav">
+      <a href="#home">Home</a>
+      <a href="https://github.com/Denta-ai" target="_blank">About</a>
+    </div>
+  </nav>
+
+<!-- main -->
+  <main>
+  <div class="overlay-item-1">
+    <div class="content-item-1">
+      <div class="slider-container">
+        <div class="slider">
+
+          <div class="slide">
+            <img src="/img/special/p.png" alt="Image 1">
+            <div class="text-slide">CHICKEN SOUP</div>
+            <a href="#cart-1">
+              <button class="checkout-button" onclick="openCart1()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-1.png" alt="Image 2">
+            <div class="text-slide">WINGS BUCKET</div>
+            <a href="#cart-2">
+              <button class="checkout-button" onclick="openCart2()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-2.png" alt="Image 3">
+            <div class="text-slide">WINGER BBQ</div>
+            <a href="#cart-3">
+              <button class="checkout-button" onclick="openCart3()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-3.png" alt="Image 4">
+            <div class="text-slide">WINGER COMBO BBQ</div>
+            <a href="#cart-4">
+              <button class="checkout-button" onclick="openCart4()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-4.png" alt="Image 5">
+            <div class="text-slide">CHICKEN STRIPS BBQ</div>
+            <a href="#cart-5">
+              <button class="checkout-button" onclick="openCart5()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-5.png" alt="Image 6">
+            <div class="text-slide">SNACK BUCKET 1 BBQ</div>
+            <a href="#cart-6">
+              <button class="checkout-button" onclick="openCart6()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-6.png" alt="Image 7">
+            <div class="text-slide">9 PCS BUCKET</div>
+            <a href="#cart-7">
+              <button class="checkout-button" onclick="openCart7()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-7.png" alt="Image 8">
+            <div class="text-slide">SNACK BUCKET 2 BBQ</div>
+            <a href="#cart-8">
+              <button class="checkout-button" onclick="openCart8()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-8.png" alt="Image 9">
+            <div class="text-slide">SPAGHETTI BUCKET 1</div>
+            <a href="#cart-9">
+              <button class="checkout-button" onclick="openCart9()">Add to Cart</button>
+            </a>
+          </div>
+
+          <div class="slide">
+            <img src="/img/special/p-9.png" alt="Image 10">
+            <div class="text-slide">SPAGHETTI BUCKET 2</div>
+            <a href="#cart-10">
+              <button class="checkout-button" onclick="openCart10()">Add to Cart</button>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <button class="prev-button">&#8249;</button>
+      <button class="next-button">&#8250;</button>
+    </div>
+  </div>
+
+<!-- cart-1 -->
+  <div class="overlay-cart" id="cart-1">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: CHICKEN SOUP</p>
+            <p>Price: $13.5</p>
+            <label for="name-user-1">Name</label><br>
+            <input type="text" name="name-user" id="name-user-1"><br>
+            <label for="quantity-user-1">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-1"><br><br>
+            <input type="hidden" name="cart-id" value="cart-1">
+            <input type="hidden" name="user-id" value="1">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart1()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-2 -->
+  <div class="overlay-cart" id="cart-2">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: WINGS BUCKET</p>
+            <p>Price: $23.5</p>
+            <label for="name-user-2">Name</label><br>
+            <input type="text" name="name-user" id="name-user-2"><br>
+            <label for="quantity-user-2">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-2"><br><br>
+            <input type="hidden" name="cart-id" value="cart-2">
+            <input type="hidden" name="user-id" value="1">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart2()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-3 -->
+  <div class="overlay-cart" id="cart-3">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: WINGER BBQ</p>
+            <p>Price: $33.5</p>
+            <label for="name-user-3">Name</label><br>
+            <input type="text" name="name-user" id="name-user-3"><br>
+            <label for="quantity-user-3">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-3"><br><br>
+            <input type="hidden" name="cart-id" value="cart-3">
+            <input type="hidden" name="user-id" value="2">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart3()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-4 -->
+  <div class="overlay-cart" id="cart-4">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: WINGER COMBO BBQ</p>
+            <p>Price: $23.9</p>
+            <label for="name-user-4">Name</label><br>
+            <input type="text" name="name-user" id="name-user-4"><br>
+            <label for="quantity-user-4">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-4"><br><br>
+            <input type="hidden" name="cart-id" value="cart-4">
+            <input type="hidden" name="user-id" value="2">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart4()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-5 -->
+  <div class="overlay-cart" id="cart-5">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: CHICKEN STRIPS BBQ</p>
+            <p>Price: $15.9</p>
+            <label for="name-user-5">Name</label><br>
+            <input type="text" name="name-user" id="name-user-5"><br>
+            <label for="quantity-user-5">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-5"><br><br>
+            <input type="hidden" name="cart-id" value="cart-5">
+            <input type="hidden" name="user-id" value="3">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart5()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-6 -->
+  <div class="overlay-cart" id="cart-6">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: SNACK BUCKET 1 BBQ</p>
+            <p>Price: $20.1</p>
+            <label for="name-user-6">Name</label><br>
+            <input type="text" name="name-user" id="name-user-6"><br>
+            <label for="quantity-user-6">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-6"><br><br>
+            <input type="hidden" name="cart-id" value="cart-6">
+            <input type="hidden" name="user-id" value="3">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart6()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-7 -->
+  <div class="overlay-cart" id="cart-7">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: 9 PCS BUCKET</p>
+            <p>Price: $22.1</p>
+            <label for="name-user-7">Name</label><br>
+            <input type="text" name="name-user" id="name-user-7"><br>
+            <label for="quantity-user-7">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-7"><br><br>
+            <input type="hidden" name="cart-id" value="cart-7">
+            <input type="hidden" name="user-id" value="4">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart7()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-8 -->
+  <div class="overlay-cart" id="cart-8">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: SNACK BUCKET 2 BBQ</p>
+            <p>Price: $14.1</p>
+            <label for="name-user-8">Name</label><br>
+            <input type="text" name="name-user" id="name-user-8"><br>
+            <label for="quantity-user-8">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-8"><br><br>
+            <input type="hidden" name="cart-id" value="cart-8">
+            <input type="hidden" name="user-id" value="4">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart8()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-9 -->
+  <div class="overlay-cart" id="cart-9">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: SPAGHETTI BUCKET 1</p>
+            <p>Price: $21</p>
+            <label for="name-user-9">Name</label><br>
+            <input type="text" name="name-user" id="name-user-9"><br>
+            <label for="quantity-user-9">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-9"><br><br>
+            <input type="hidden" name="cart-id" value="cart-9">
+            <input type="hidden" name="user-id" value="5">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart9()">Close</button>
+    </div>
+  </div>
+
+<!-- cart-10 -->
+  <div class="overlay-cart" id="cart-10">
+    <div class="content-cart">
+        <form action="../php/index.php" method="post">
+            <h2>Order</h2>
+            <p>Product: SPAGHETTI BUCKET 2</p>
+            <p>Price: $26.7</p>
+            <label for="name-user-10">Name</label><br>
+            <input type="text" name="name-user" id="name-user-10"><br>
+            <label for="quantity-user-10">Quantity</label><br>
+            <input type="number" name="quantity-user" id="quantity-user-10"><br><br>
+            <input type="hidden" name="cart-id" value="cart-10">
+            <input type="hidden" name="user-id" value="5">
+            <input type="submit" name="submit" id="submit" value="Buy">
+        </form>
+        <button onclick="closeCart10()">Close</button>
+    </div>
+  </div>
+
+</main>
+
+
+<!-- footer -->
+  <footer>
+    <p>&copy; 2023 Denta Septyan Afandi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
