@@ -29,4 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   prevButton.addEventListener('click', handleClickPrev);
   nextButton.addEventListener('click', handleClickNext);
+
+  var navLinks = document.querySelectorAll('.navbar-nav a');
+
+  // Add click event link to each navigation link
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function(event) {
+      if (link.getAttribute('href').startsWith('http')) {
+        return;
+      }
+      event.preventDefault();
+      var href = link.getAttribute('href');
+      window.location.href = href;
+    });
+  });
 });
